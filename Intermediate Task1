@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form with Validations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+         .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #004466;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #006699;
+        }
+
+    </style>
+</head>
+<body>
+        <h2>Sign In </h2>
+    
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <div class="error" id="emailError"></div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <div class="error" id="messageError"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById('nameError').innerText = "";
+            document.getElementById('emailError').innerText = "";
+            document.getElementById('messageError').innerText = "";
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+            let isValid = true;
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Please enter your name.";
+                isValid = false;
+            }
+
+            // Email validation (basic)
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Please enter your email.";
+                isValid = false;
+            } else if (!email.match(/^\S+@\S+\.\S+$/)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Please enter a message.";
+                isValid = false;
+            }
+
+            return isValid; // If false, form won’t submit
+        }
+    </script>
+
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+
+    <main>
+        <h2>Intermediate Task 1</h2>
+        <p>Create a form with input fields and validate user input using JavaScript.</p>
+        
+        <img src="c:\Users\unitec\Desktop\DP\HTML1.png" alt="HTML1">
+        <img src="c:\Users\unitec\Desktop\DP\HTML2.png" alt="HTML2" style="height: 300px;">
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My HTML Project | Task 2</p>
+    </footer>
+
+</body>
+</html>
+
