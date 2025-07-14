@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #004466;
+            color: blue;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            font-size: 20px;
+            color: rgb(21, 67, 83);
+        }
+         h1, h2 {
+            color: #04dee2;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+            margin: 12px 0;
+            display: block;
+            margin: 12px auto;
+            border: 3px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+
+    <main>
+        <h2>Task 2</h2>
+        <p>Style the previously created HTML page using CSS. Apply basic styles such as background color, font size, and margin/padding.</p>
+        
+        <img src="c:\Users\unitec\Desktop\DP\HTML1.png" alt="HTML1">
+        <img src="c:\Users\unitec\Desktop\DP\HTML2.png" alt="HTML2" style="height: 300px;">
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My HTML Project | Task 2</p>
+    </footer>
+
+</body>
+</html>
+
